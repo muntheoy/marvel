@@ -1,19 +1,19 @@
 @import './variables';
 
-.footer {
-  margin-top: auto; /* Позволяет футеру смещаться вниз */
-}
-
 .container {
+  margin-top: auto; 
   display: flex;
   flex-direction: column;
   background-color: $footer-color;
-  padding: 10pt 20pt;
-  border-top: 2px solid $secondary-color;
-}
+  padding: 24pt 20pt;
+  
+}   
 
 .container p {
   color: white;
+  font-weight: $regular;
+    font-family: $font-open-sans;
+    font-size: 12pt;  
 }
 
 .container img {

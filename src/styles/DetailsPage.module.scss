@@ -1,18 +1,60 @@
 @import './variables';
 
+.container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 
+}
 .info {
     display: flex;
-    padding: 20px;
+    padding: 20pt;
+    flex-direction: row;
 }
-
-.tide {
-
-}
-
 
 .container img {
     width: 100%;
     max-height: 320pt;
     object-fit: cover;
+    }
+
+.tide{
+    max-width: 50dvb;
+    margin-right: 24dvb;
+
+}
+
+.tide h1{
+    font-weight: $bold;
+    font-family: $font-oswald;
+    margin-right: 5pt;
+    font-size: 30pt;
+}
+
+.tide p{
+    font-weight: $regular;
+    font-family: $font-open-sans;
+    margin-right: 5pt;
+    font-size: 16pt;    
+}
+
+.comicsList{
+
+}
+
+.comicsList h2{
+    font-weight: $bold;
+    font-family: $font-oswald;
+    margin-right: 5pt;
+    font-size: 24pt;
+}
+
+.links{
+    display: flex;
+    flex-direction: column  ;
+    font-weight: $regular;
+    font-family: $font-open-sans;
+    margin-right: 5pt;
+    font-size: 16pt; 
+    gap: 8pt;   
 }

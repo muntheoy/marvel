@@ -37,18 +37,17 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ entityType }) => {
             {entityType === "character" && (
                 <div className={styles.comicsList}>
                 <h2>Comics featuring this character:</h2>
-                <ul>
+                <div className={styles.links}>
                     {(data as Character).comics.map((comicId) => {
                     const comic = comics.find((c) => c.id === comicId);
                     return (
                         comic && (
-                        <li key={comic.id}>
                             <a href={`/comics/${comic.id}`}>{comic.title}</a>
-                        </li>
+                        
                         )
                     );
                     })}
-                </ul>
+                </div>
                 </div>
             )}
 

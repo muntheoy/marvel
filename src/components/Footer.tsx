@@ -5,13 +5,12 @@ import logo from '../assets/logo.svg';
 const Footer: React.FC = () => {
 
     return (
-        <div className="footer">
             <div className={styles.container}>
                 <img src={logo} alt="Logo"/>
 
                 <p>Data provided by Marvel 2022 MARVEL</p>
             </div>
-        </div>
+        
     );
 };
 
