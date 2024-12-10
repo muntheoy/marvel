@@ -1,11 +1,11 @@
 import './App.css';
-import React from 'react';
 import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import CharactersPage from './components/CharactersPage';
 import ComicsPage from './components/ComicsPage';
-import DetailsPage from './components/DetailsPage';
-import Footer from "./components/Footer";
+import Footer from './components/Footer';
+import CharacterDetails from './components/CharacterDetails';
+import ComicDetails from './components/ComicDetails';
 
 const App: React.FC = () => {
   return (
@@ -15,9 +15,9 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/characters" replace />} />
           <Route path="/characters" element={<CharactersPage />} />
-          <Route path="/characters/:id" element={<DetailsPage entityType="character" />} />
           <Route path="/comics" element={<ComicsPage />} />
-          <Route path="/comics/:id" element={<DetailsPage entityType="comics" />} />
+          <Route path="/characters/:id" element={<CharacterDetails />} />
+          <Route path="/comics/:id" element={<ComicDetails />} />
         </Routes>
         <Footer />
       </div>

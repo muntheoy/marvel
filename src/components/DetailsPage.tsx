@@ -24,16 +24,15 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ entityType }) => {
   return (
     <div className={styles.container}>
 
-        <img src={data.imageUrl} alt={title} className={styles.image} />
+        <img src={data.imageUrl} alt={title} />
 
         <div className={styles.info}>
             <div className={styles.tide}>
-                <h1>{title}</h1>
+                <h1>хуй</h1>
                 <p>{data.description}</p>
             </div>
         
 
-            {/* Если это персонаж, отображаем комиксы, в которых он участвует */}
             {entityType === "character" && (
                 <div className={styles.comicsList}>
                 <h2>Comics featuring this character:</h2>
@@ -43,7 +42,6 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ entityType }) => {
                     return (
                         comic && (
                             <a href={`/comics/${comic.id}`}>{comic.title}</a>
-                        
                         )
                     );
                     })}
@@ -51,7 +49,7 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ entityType }) => {
                 </div>
             )}
 
-            {/* Если это комикс, отображаем персонажей, участвующих в нем */}
+            {/* If this is a comic, display the characters featured in it */}
             {entityType === "comics" && (
                 <div className={styles.charactersList}>
                 <h2>Characters in this comic:</h2>

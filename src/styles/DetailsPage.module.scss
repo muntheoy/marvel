@@ -8,53 +8,66 @@
 }
 .info {
     display: flex;
+    flex-direction: row;
     padding: 20pt;
     flex-direction: row;
 }
 
 .container img {
-    width: 100%;
-    max-height: 320pt;
+    max-height: 350pt;
     object-fit: cover;
-    }
+    
+}
 
-.tide{
+.title{
     max-width: 50dvb;
-    margin-right: 24dvb;
+    margin-right: 32dvb;
 
 }
 
-.tide h1{
+.title h1{
     font-weight: $bold;
     font-family: $font-oswald;
     margin-right: 5pt;
     font-size: 30pt;
 }
 
-.tide p{
+.title p{
     font-weight: $regular;
     font-family: $font-open-sans;
     margin-right: 5pt;
     font-size: 16pt;    
 }
 
-.comicsList{
+.list{
 
 }
 
-.comicsList h2{
+.list h2{
     font-weight: $bold;
     font-family: $font-oswald;
     margin-right: 5pt;
     font-size: 24pt;
 }
 
-.links{
+.list ul{
     display: flex;
-    flex-direction: column  ;
+    flex-direction: column ;
     font-weight: $regular;
     font-family: $font-open-sans;
     margin-right: 5pt;
     font-size: 16pt; 
     gap: 8pt;   
 }
+
+.loading{
+    display: flex;
+    flex: 1;
+    
+    justify-content: center;
+    padding: 24pt 64pt;
+    font-weight: $bold;
+      font-family: $font-oswald;
+      margin-right: 5pt;
+      font-size: 48pt;
+  }

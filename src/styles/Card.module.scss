@@ -1,41 +1,50 @@
 @import './variables';
 
 .contanier {
-    border: 1px solid $secondary-color;
-    height: 32vh;
+  border: 1px solid $secondary-color;
+  height: 32vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ограничиваем содержимое карточки */
 }
 
 .contanier img {
-    width: 100%;  
-    height: 50%;
-    object-fit: cover;
-    margin: 0;
+  width: 100%;  
+  height: 50%;
+  object-fit: cover;
+  margin: 0;
 }
 
 .text {
-    flex-direction: column;
-    padding: 10pt 10pt;  
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+  flex-direction: column;
+  padding: 10pt 10pt;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden; /* Скрываем всё, что выходит за границы блока */
 }
 
 .title {
-    font-family: $font-open-sans;
-    font-weight: $bold;
-    font-size: $card-title-font-size;
-    color: $primary-color;
-    margin: 0;
-    margin-bottom: 8pt;
+  font-family: $font-open-sans;
+  font-weight: $bold;
+  font-size: $card-title-font-size;
+  color: $primary-color;
+  margin: 0;
+  margin-bottom: 8pt;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Скрываем лишний текст */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 .description {
-    font-family: $font-open-sans;
-    font-weight: $regular;
-    font-size: $card-description-font-size;
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
+  font-family: $font-open-sans;
+  font-weight: $regular;
+  font-size: $card-description-font-size;
+  margin: 0;
+  overflow: hidden; /* Скрываем лишний текст */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Обрезаем после 3-х строк */
+  -webkit-box-orient: vertical;
 }

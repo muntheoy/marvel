@@ -6,6 +6,7 @@
   align-items: center;
   padding: 5pt 30pt;
   flex: 1;
+  margin-bottom: 40pt;
 }
 
 .header{
@@ -67,13 +68,28 @@
     opacity: 0.2;
   }
 
-.cardList {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); 
-  gap: 20pt;
-  width: 100%;
-}
+  .cardList {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); // Ровно 6 карточек в ряду
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+  }
+  
 
 .cardList > * {
   width: 100%;
+}
+
+
+.loading{
+  display: flex;
+  flex: 1;
+  
+  justify-content: center;
+  padding: 24pt 64pt;
+  font-weight: $bold;
+    font-family: $font-oswald;
+    margin-right: 5pt;
+    font-size: 48pt;
 }
